@@ -1,1 +1,15 @@
 /* Custom CSS goes here */
+
+/* Global CSS */
+@import url(./global.css);
+
+/* Partial CSS */
+@import url(./partials/header.css);
+@import url(./partials/footer.css);
+
+/* Content CSS */
+@import url(./contents/home.css);
+@import url(./contents/about.css);
+@import url(./contents/services.css);
+@import url(./contents/projects.css);
+@import url(./contents/contact.css);

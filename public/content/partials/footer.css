@@ -1,0 +1,15 @@
+footer {
+    /* margin-top: 60px; */
+    color: #333;
+    font-family: 'Share Tech Mono', monospace;
+}
+footer nav.navbar {
+    position: initial;
+    height: 70px;
+    border-top: 5px solid #333;
+    border-bottom: 0px;
+}
+footer nav.navbar .navbar-text {
+    font-size: 20px;
+    color: #333;
+}

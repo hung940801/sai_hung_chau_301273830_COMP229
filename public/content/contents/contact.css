@@ -1,0 +1,73 @@
+body.contact > main {
+    padding-bottom: 0px;
+}
+
+.contact-info-wrapper {
+    padding: 20px;
+}
+.contact-info-wrapper > .contact-info-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.contact-info-wrapper > [class^="contact-info-"] > span{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+}
+.contact-info-wrapper > [class^="contact-info-"] > a{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.contact-form-wrapper {
+    display: flex;
+    border-top: 5px solid #333;
+    /* border-bottom: 5px solid #333; */
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.contact-form-wrapper > .contact-form-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    padding-left: 20px;
+}
+.contact-form-wrapper > .contact-form > * {
+    margin-top: 20px;
+}
+.contact-form-wrapper > .contact-form > input {
+    margin-top: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    height: 40px;
+}
+.contact-form-wrapper > .contact-form > textarea {
+    margin-top: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    height: 100px;
+}
+.contact-form-wrapper > .contact-form > button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    height: 50px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #FFF;
+    background-color: #333;
+}
+.contact-form-wrapper > .contact-form > button:hover {
+    background-color: #FFF;
+    color: #333;
+}
+.contact-form-wrapper > .contact-form > .contact-form-name-wrapper input {
+    width: calc(50% - 15px);
+    border: 3px solid #333;
+    border-radius: 0px;
+    height: 40px;
+}
+.contact-form-wrapper > .contact-form-success-msg {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    display: none;
+}

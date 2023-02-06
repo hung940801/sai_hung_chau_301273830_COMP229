@@ -1,5 +1,14 @@
 <main class="container">
     <div class="jumbotron">
-        <h1 class="display-4">Welcome to <%= title %> Page </h1>
+        <h1 class="display-5"><%= title %></h1>
     </div>
+    <% if (slug.toLowerCase() == "home") { %>
+        <%-include ../contents/home.ejs%>
+    <% } else if (slug.toLowerCase() == "about") { %>
+        <%-include ../contents/about.ejs%>
+    <% } else if (slug.toLowerCase() == "contact") { %>
+        <%-include ../contents/contact.ejs%>
+    <% } else if (slug.toLowerCase() == "services") { %>
+        <%-include ../contents/services.ejs%>
+    <% } %>
 </main>

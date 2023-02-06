@@ -1,0 +1,56 @@
+body.home > main {
+    padding-bottom: 0px;
+}
+
+.home-intro {
+    padding: 40px 20px;
+}
+
+.home-table {
+    border-top: 5px solid #333;
+}
+.home-table .home-table-cell {
+    border-bottom: 5px solid #333;
+    padding: 20px 20px;
+    min-height: 280px;
+}
+.home-table .home-table-cell:nth-last-of-type(1), 
+.home-table .home-table-cell:nth-last-of-type(2) {
+    border-bottom: 0px;
+}
+.home-table .home-table-cell:nth-of-type(odd) {
+    border-right: 5px solid #333;
+}
+.home-table .home-table-cell.home-nav-text {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.home-table .home-table-cell.home-nav-text i {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.home-table .home-table-cell.home-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    background-color: #333;
+    /* transition: background-color .3s ease, color .3s ease; */
+}
+.home-table .home-table-cell.home-nav-link a {
+    font-family: 'Share Tech Mono', monospace;
+}
+.home-table .home-table-cell.home-nav-link i {
+    font-size: 2.5rem;
+    margin-right: 10px;
+    /* transition: color .3s ease; */
+}
+.home-table .home-table-cell.home-nav-link:hover {
+    background-color: #FFF;
+    color: #333 !important;
+}
+.home-table .home-table-cell.home-nav-link:hover i {
+    color: #333;
+}

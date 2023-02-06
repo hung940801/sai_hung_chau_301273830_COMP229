@@ -1,0 +1,34 @@
+.navbar {
+    position: relative;
+    height: 90px;
+    border-bottom: 5px solid #333;
+}
+.navbar .navbar-brand {
+    position: absolute;
+}
+.navbar .navbar-brand img {
+    width: 60px;
+}
+#navbarSupportedContent ul {
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30px;
+}
+#navbarSupportedContent ul li a {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    color: #333;
+    opacity: 0.55;
+}
+#navbarSupportedContent ul li a.active {
+    opacity: 1;
+}
+#navbarSupportedContent ul li a i {
+    font-size: 28px;
+}
+
+@media (max-width: 992px) {
+    .navbar .navbar-brand {
+        position: initial;
+    }
+}

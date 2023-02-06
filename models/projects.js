@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let booksModel = mongoose.Schema({
+let projectsModel = mongoose.Schema({
     name        : String,
     author      : String,
     published   : String,
@@ -10,4 +10,4 @@ let booksModel = mongoose.Schema({
     collection: "books"
 });
 
-module.exports = mongoose.model('books', booksModel);
+module.exports = mongoose.model('projects', projectsModel);
