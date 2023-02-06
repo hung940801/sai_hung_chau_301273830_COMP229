@@ -5,17 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // connect to mongo, database setup
-let mongoose = require('mongoose');
-let DB = require('./db')
+// let mongoose = require('mongoose');
+// let DB = require('./db')
 
 // point mongoose to the db{"URI"}
-mongoose.connect(DB.URI, { useNewUrlParser:true, useUnifiedtopology:true });
+// mongoose.connect(DB.URI, { useNewUrlParser:true, useUnifiedtopology:true });
 //creating an event to let mongo connect to the database
-let mongoDB = mongoose.connection;
-mongoDB.on('error', console.error.bind(console, "Connect Error: "));
-mongoDB.once('open', ()=>{
-    console.log("Connected to mongoDB..");
-});
+// let mongoDB = mongoose.connection;
+// mongoDB.on('error', console.error.bind(console, "Connect Error: "));
+// mongoDB.once('open', ()=>{
+//     console.log("Connected to mongoDB..");
+// });
 
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
