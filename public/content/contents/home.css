@@ -41,6 +41,8 @@ body.home > main {
 }
 .home-table .home-table-cell.home-nav-link a {
     font-family: 'Share Tech Mono', monospace;
+    width: 100%;
+    height: 100%;
 }
 .home-table .home-table-cell.home-nav-link i {
     font-size: 2.5rem;
