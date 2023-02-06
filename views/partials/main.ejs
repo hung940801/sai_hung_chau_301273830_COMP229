@@ -1,7 +1,10 @@
+<!-- General main section -->
 <main class="container">
+    <!-- Page header -->
     <div class="jumbotron">
         <h1 class="display-5"><%= title %></h1>
     </div>
+    <!-- Import different section based on pages -->
     <% if (slug.toLowerCase() == "home") { %>
         <%-include ../contents/home.ejs%>
     <% } else if (slug.toLowerCase() == "about") { %>

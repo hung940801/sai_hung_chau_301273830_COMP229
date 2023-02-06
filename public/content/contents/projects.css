@@ -1,3 +1,12 @@
+/* --------------------------------------------- */
+/* Filename: project.css                         */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* Section: Projects                             */
+/* --------------------------------------------- */
+
+/* Set the Projects page style */
 .projects-intro {
     padding: 20px;
     font-family: 'Share Tech Mono', monospace;
@@ -43,6 +52,8 @@
 .projects-table > .project > a[id^="btn-modal"]:hover .project-name {
     display: block;
 }
+
+/* Set the style of the modals in Projects page */
 .modal .modal-dialog .modal-content {
     border-radius: 0px;
     border: 5px solid #333;

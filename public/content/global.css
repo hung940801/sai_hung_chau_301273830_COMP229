@@ -1,8 +1,17 @@
+/* --------------------------------------------- */
+/* Filename: global.css                          */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* --------------------------------------------- */
+
+/* Set the font style globally */
 * {
     font-family: monospace;
     font-size: 18px;
 }
 
+/* Disable some statis style of a tag */
 a, 
 a:active, 
 a:hover, 
@@ -15,6 +24,7 @@ a:focus-within {
     color: inherit;
 }
 
+/* Set font style for all h tag */
 html > body h1,
 html > body h2,
 html > body h3,
@@ -24,6 +34,7 @@ html > body h6 {
     font-family: 'Share Tech Mono', monospace;
 }
 
+/* Set a global for the main element */
 body > main {
     /* min-height: calc(100vh - 90px - 70px - 60px); */
     min-height: calc(100vh - 90px - 70px);

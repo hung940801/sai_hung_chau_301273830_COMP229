@@ -1,3 +1,12 @@
+/* --------------------------------------------- */
+/* Filename: home.css                            */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* Section: Home                                 */
+/* --------------------------------------------- */
+
+/* Set the style of Homepage elements */
 body.home > main {
     padding-bottom: 0px;
 }

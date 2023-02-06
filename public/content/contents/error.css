@@ -1,3 +1,12 @@
+/* --------------------------------------------- */
+/* Filename: error.css                           */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* Section: Error Page                           */
+/* --------------------------------------------- */
+
+/* set the error page message style */
 main .error-page-msg {
     padding-top: 20px;
     padding-left: 20px;

@@ -1,17 +1,21 @@
+<!-- Projects page template -->
 <!-- include the opening tag of <body> and <html> -->
 <%-include partials/html_head.ejs%>
 
     <%-include partials/header.ejs%>
 
     <main class="container">
+        <!-- Page header -->
         <div class="jumbotron">
             <h1 class="display-5"><%= title %></h1>
         </div>    
         <div class="row">
             <div class="col--md-offset-3 col md-8">
+                <!-- Page short description -->
                 <div class="projects-intro">
                     I listed out some project I did before, Please click for more details.
                 </div>
+                <!-- Projects grid list -->
                 <div class="projects-table col-12 d-flex flex-wrap align-it-=em-center justify-content-start">
                     <div class="project col-4">
                         <a class="" data-toggle="modal" href="#modal1" id="btn-modal1" data-modal-num="1" style="background-image: url('/assets/images/tool/tool_hm.jpg');">
@@ -40,7 +44,7 @@
     
     <%-include partials/footer.ejs%>
 
-    <!--  -->
+    <!-- All the bootstrap modal box -->
     <!-- Modal -->
     <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">

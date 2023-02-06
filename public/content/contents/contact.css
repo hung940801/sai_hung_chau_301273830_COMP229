@@ -1,3 +1,12 @@
+/* --------------------------------------------- */
+/* Filename: contact.css                         */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* Section: Conact                               */
+/* --------------------------------------------- */
+
+/* Set the style in Contact page */
 body.contact > main {
     padding-bottom: 0px;
 }
@@ -18,6 +27,8 @@ body.contact > main {
     font-size: 1.5rem;
     text-decoration: underline;
 }
+
+/* Set the style in the contact form */
 .contact-form-wrapper {
     display: flex;
     border-top: 5px solid #333;
