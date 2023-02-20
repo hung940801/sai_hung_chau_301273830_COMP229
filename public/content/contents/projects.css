@@ -77,9 +77,16 @@
     padding: 20px;
     border-bottom: 5px solid #333;
 }
-.modal .modal-dialog .modal-content .modal-body .project-intro a {
+.modal .modal-dialog .modal-content .modal-body .project-intro .project-intro-link-wrapper {
     display: block;
     margin-top: 20px;
+    padding: 0px;
+    border: 0px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.modal .modal-dialog .modal-content .modal-body .project-intro .project-intro-link-wrapper a {
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
     text-decoration: underline;
