@@ -1,0 +1,22 @@
+<!-- General pages template -->
+<!-- include the opening tag of <body> and <html> -->
+<%-include ../partials/html_head.ejs%>
+
+    <%-include ../partials/header.ejs%>
+
+    <!-- General main section -->
+    <main class="container">
+        <!-- Page header -->
+        <div class="jumbotron">
+            <h1 class="display-5"><%= title %></h1>
+        </div>
+        <!-- Import different section based on pages -->
+        <% if (slug.toLowerCase() == "login") { %>
+            <%-include ./login.ejs%>
+        <% } %>
+    </main>
+    
+    <%-include ../partials/footer.ejs%>
+
+<!-- include the closing tag of <body> and <html> -->
+<%-include ../partials/html_end.ejs%>
