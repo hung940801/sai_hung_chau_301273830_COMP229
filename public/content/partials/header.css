@@ -14,9 +14,15 @@
 }
 .navbar .navbar-brand {
     position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    border-radius: 50%;
 }
 .navbar .navbar-brand img {
     width: 60px;
+}
+#navbarSupportedContent {
+    position: relative;
 }
 #navbarSupportedContent ul {
     margin-left: auto;
@@ -32,8 +38,74 @@
 #navbarSupportedContent ul li a.active {
     opacity: 1;
 }
+#navbarSupportedContent ul li a:hover {
+    opacity: 1;
+}
 #navbarSupportedContent ul li a i {
     font-size: 28px;
+}
+#navbarSupportedContent .navbar-login-wrapper {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0px, -50%);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    color: #333;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#navbarSupportedContent .navbar-login-wrapper a {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    color: #333;
+}
+#navbarSupportedContent .navbar-login-wrapper a i {
+    font-size: 28px;
+    color: #333;
+}
+#navbarSupportedContent .navbar-login-wrapper span {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #333;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown {
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #333;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown i {
+    font-size: 22px;
+    color: #333;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown a {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #333;
+    text-decoration: underline;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown a::after {
+    display: none;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown .dropdown-menu {
+    border: 5px solid #333;
+    border-radius: 0px;
+    padding: 10px;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown .dropdown-menu a {
+    display: inline-block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #333;
+    text-decoration: underline;
+    opacity: 1;
+}
+#navbarSupportedContent .navbar-login-wrapper .user-dropdown .dropdown-menu a i {
+    font-size: 22px;
+    color: #333;
 }
 
 @media (max-width: 992px) {

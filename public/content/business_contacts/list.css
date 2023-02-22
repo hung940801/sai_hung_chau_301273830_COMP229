@@ -1,0 +1,50 @@
+/* --------------------------------------------- */
+/* Filename: /business_contact/list.css          */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* --------------------------------------------- */
+
+/* Sytle of the business contact listing table */
+.business-contacts-list-wrapper .business-contacts-list-table {
+    border: 0px;
+}
+.business-contacts-list-wrapper .btn-add-business-contact-wrapper {
+    border-bottom: 5px solid #333;
+    padding: 20px;
+}
+.business-contacts-list-wrapper .btn-add-business-contact-wrapper a {
+    border: 5px solid #333;
+    border-radius: 0px;
+    background-color: #333;
+    color: #FFF;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+}
+.business-contacts-list-wrapper .btn-add-business-contact-wrapper a:hover {
+    background-color: #FFF;
+    color: #333;
+}
+.business-contacts-list-wrapper .business-contacts-list-table thead tr th {
+    border-bottom: 5px solid #333;
+    border-right: 5px solid #333;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 22px;
+    padding: 20px;
+}
+.business-contacts-list-wrapper .business-contacts-list-table thead tr th:last-of-type {
+    border-right: 0px;
+}
+.business-contacts-list-wrapper .business-contacts-list-table tbody tr td {
+    border-bottom: 5px solid #333;
+    border-right: 5px solid #333;
+    font-size: 20px;
+    padding: 20px;
+}
+.business-contacts-list-wrapper .business-contacts-list-table tbody tr td:last-of-type {
+    border-right: 0px;
+}
+.business-contacts-list-wrapper .business-contacts-list-table tbody tr td a span {
+    font-size: 20px;
+    text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+/* --------------------------------------------- */
+/* Filename: /auth/login.css                     */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* --------------------------------------------- */
+
+/* Sytle of the login form */
+.login-form-container {
+    padding: 20px;
+}
+.login-form-container .login-form .form-group label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+}
+.login-form-container .login-form .form-group input {
+    margin-bottom: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    height: 40px;
+}
+.login-form-container .login-form .form-group input[type="submit"].login-form-submit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #FFF;
+    background-color: #333;
+}
+.login-form-container .login-form .form-group input[type="submit"].login-form-submit:hover {
+    background-color: #FFF;
+    color: #333;
+}
+.login-form-container .login-form .form-group.login-form-register-wrapper {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    color: #333;
+}
+.login-form-container .login-form .form-group.login-form-register-wrapper .login-form-register {
+    text-decoration: underline;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    color: #333;
+}

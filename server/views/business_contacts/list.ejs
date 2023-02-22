@@ -1,0 +1,47 @@
+<!-- Partial element of business contact -->
+<div class="col--md-offset-3 col md-8 business-contacts-list-wrapper">
+    <!-- Add button of business contact -->
+    <!-- Check if the user logged in -->
+    <% if (typeof displayName == "string" && displayName) { %>
+        <div class="btn-add-business-contact-wrapper">
+            <a href="/business_contacts/add" class="btn btn-add-business-contact" role="button">
+                <i class="fas fa-plus-circle"></i>&nbsp;Add a Business Contact
+            </a>
+        </div>
+    <% } %>
+    <!-- Listing table of business contact -->
+    <table class="table table-hover business-contacts-list-table">
+        <thead>
+            <tr>
+                <% if (typeof displayName == "string" && displayName) { %>
+                    <th class="text-content col-3">Contact Name</th>
+                    <th class="text-content col-2">Contact Number</th>
+                    <th class="text-content col-3">Contact Email</th>
+                    <th class="text-content col-2">Edit</th>
+                    <th class="text-content col-2">Delete</th>
+                <% } else { %>
+                    <th class="text-content col-5">Contact Name</th>
+                    <th class="text-content col-3">Contact Number</th>
+                    <th class="text-content col-4">Contact Email</th>
+                <% } %>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let count = 0; count < BusinessContactList.length; count++) {%>
+                <tr>
+                    <% if (typeof displayName == "string" && displayName) { %>
+                        <td class="col-3"><%= BusinessContactList[count].contact_name %></td>
+                        <td class="col-2"><%= BusinessContactList[count].contact_number %></td>
+                        <td class="col-3"><%= BusinessContactList[count].contact_email %></td>
+                        <td class="text-center col-2"><a href="/business_contacts/edit/<%= BusinessContactList[count].id %>" class=""><i class="fas fa-pencil-alt"></i>&nbsp;<span>Edit</span></a></td>
+                        <td class="text-center col-2"><a href="/business_contacts/delete/<%= BusinessContactList[count].id %>" class="btn-delete-business-contact"><i class="fas fa-trash-alt"></i>&nbsp;<span>Delete</span></a></td>
+                    <% } else { %>
+                        <td class="col-5"><%= BusinessContactList[count].contact_name %></td>
+                        <td class="col-3"><%= BusinessContactList[count].contact_number %></td>
+                        <td class="col-4"><%= BusinessContactList[count].contact_email %></td>
+                    <% } %>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+</div>

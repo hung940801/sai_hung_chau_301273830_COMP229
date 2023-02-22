@@ -2,28 +2,7 @@ let express = require('express');
 let router = express.Router();
 let indexController = require('../controllers/index');
 
-/* GET home page. */
-/*
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Hi, I am Cyrus, a software developer. This website is a small portfolio of mine. :)', slug: 'home' });
-});
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Hi, I am Cyrus, a software developer. This website is a small portfolio of mine. :)', slug: 'home' });
-});
-router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About', slug: 'about' });
-});
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services', slug: 'services' });
-});
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products', slug: 'products' });
-});
-router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact', slug: 'contact' });
-});
-*/
-
+/* GET pages. */
 router.get('/', indexController.displayHomePage);
 router.get('/home', indexController.displayHomePage);
 router.get('/about', indexController.displayAboutPage);

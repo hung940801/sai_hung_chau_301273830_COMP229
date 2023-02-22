@@ -1,20 +1,22 @@
-<!-- General pages template -->
+<!-- Business Contact pages template -->
 <!-- include the opening tag of <body> and <html> -->
 <%-include ../partials/html_head.ejs%>
 
     <%-include ../partials/header.ejs%>
 
-    <!-- General main section -->
+    <!-- Business Contact main section -->
     <main class="container">
         <!-- Page header -->
         <div class="jumbotron">
             <h1 class="display-5"><%= title %></h1>
         </div>
         <!-- Import different section based on pages -->
-        <% if (slug.toLowerCase() == "login") { %>
-            <%-include ./login.ejs%>
-        <% } else if (slug.toLowerCase() == "register") { %>
-            <%-include ./register.ejs%>
+        <% if (slug.toLowerCase() == "add-business-contacts") { %>
+            <%-include ./add.ejs%>
+        <% } else if (slug.toLowerCase() == "edit-business-contacts") { %>
+            <%-include ./edit.ejs%>
+        <% } else if (slug.toLowerCase() == "list-business-contacts") { %>
+            <%-include ./list.ejs%>
         <% } %>
     </main>
     

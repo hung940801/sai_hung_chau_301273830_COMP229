@@ -1,27 +1,27 @@
-<div class="">
+<div class="login-form-container">
     <!-- message Area -->
     <% if (message.length>0){%>
     <div class="alert alert-danger">
         <%=message%>
     </div>
     <% } %>
-    <div class="row">
+    <!-- login form -->
+    <div class="row align-item-center justify-content-center">
         <div class="0ffert md-4 col-md-4">
-            <h1>PLease</h1>
-            <form method="POST" autocomplete="">
+            <form method="POST" autocomplete="" class="login-form">
                 <fieldset class="form-group">
-                    <label for="username">username</label>
-                    <input type="text" class="form-control" name="username" name="idå" placeholder="enter member">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" name="idå" placeholder="Username" autofocus>
                 </fieldset>
                 <fieldset class="form-group">
-                    <label for="password">password</label>
-                    <input type="password" class="form-control" name="password" name="idå" placeholder="enter member">
-                    <a href="/register"> Register here</a>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" name="idå" placeholder="Password">
                 </fieldset>
-                <fieldset class=" form-gropu text-right">
-                    <input type="submit">
-                    <input type="submit" class="btn btn-success">
-                    <a href="inout" ></a>
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn login-form-submit">
+                </fieldset>
+                <fieldset class="form-group text-right login-form-register-wrapper">
+                    Haven't had an account? <a href="/register" class="login-form-register">Register here</a>
                 </fieldset>
             </form>
         </div>

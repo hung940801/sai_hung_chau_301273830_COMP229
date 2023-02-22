@@ -11,6 +11,16 @@
     function start() 
     {
         console.log("App Started");
+        // Confirmation alert box before confirm delete the record of business contact
+        let deleteButton = document.querySelectorAll('.btn-delete-business-contact');
+        for (button of deleteButton) {
+            button.addEventListener('click', (event)=>{
+                if (!confirm("Are you sure?")) {
+                    event.preventDefault();
+                    window.location.assign('/business_contacts');
+                }
+            });
+        }
     }
 
     window.addEventListener("load", start());

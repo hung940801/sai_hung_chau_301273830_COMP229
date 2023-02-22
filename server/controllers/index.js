@@ -2,25 +2,29 @@ let express = require('express');
 const passport = require('passport');
 let router = express.Router();
 
+// create the userModel instance
+let UserModel = require('../models/user');
+let User = UserModel.User;
+
 /* GET home page. */
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', { title: 'Hi, I am Cyrus, a software developer. This website is a small portfolio of mine. :)', slug: 'home' });
+    res.render('index', { title: 'Hi, I am Cyrus, a software developer. This website is a small portfolio of mine. :)', slug: 'home', displayName: req.user?req.user.displayName:"" });
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', { title: 'About', slug: 'about' });
+    res.render('index', { title: 'About', slug: 'about', displayName: req.user?req.user.displayName:"" });
 }
 
 module.exports.displayServicesPage = (req, res, nex) => {
-    res.render('index', { title: 'Services', slug: 'services' });
+    res.render('index', { title: 'Services', slug: 'services', displayName: req.user?req.user.displayName:"" });
 }
 
 module.exports.displayProductsPage = (req, res, next) => {
-    res.render('index', { title: 'Products', slug: 'products' });
+    res.render('index', { title: 'Products', slug: 'products', displayName: req.user?req.user.displayName:"" });
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', { title: 'Contact', slug: 'contact' });
+    res.render('index', { title: 'Contact', slug: 'contact', displayName: req.user?req.user.displayName:"" });
 }
 
 // Login
@@ -32,7 +36,7 @@ module.exports.displayLoginPage = (req, res, next) => {
             {
                 title: "Login",
                 message: req.flash('loginMessage'),
-                displayName: req.User?req.User.displayName:"",
+                displayName: req.user?req.user.displayName:"",
                 slug: 'login'
             }
         );
@@ -57,7 +61,7 @@ module.exports.processLoginPage = (req, res, next) => {
             if (err) {
                 return next(err);
             }
-            return res.redirect('/books');
+            return res.redirect('/business_contacts');
         });
     })(req, res, next);
 }
@@ -66,7 +70,7 @@ module.exports.processLoginPage = (req, res, next) => {
 module.exports.displayRegisterPage = (req, res, next) => {
     // chekc if the user is not already login
     if (!req.user) {
-        res.render('auth/register', 
+        res.render('auth/index', 
             {
                 title: 'Register',
                 message: req.flash('registerMessage'),
@@ -83,7 +87,7 @@ module.exports.processRegisterPage = (req, res, next) => {
     // initialize a user object
     let newUser = new User({
         username: req.body.username,
-        // password: req.body.password,
+        password: req.body.password,
         email: req.body.email,
         displayName: req.body.displayName,
     });
@@ -97,7 +101,7 @@ module.exports.processRegisterPage = (req, res, next) => {
                 );
                 console.log("Error: user already existed!");
             }
-            return res.render('auth/register', 
+            return res.render('auth/index', 
                 {
                     title: 'Register',
                     message: req.flash('registerMessage'),
@@ -107,7 +111,7 @@ module.exports.processRegisterPage = (req, res, next) => {
             );
         } else {
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/books');
+                res.redirect('/business_contacts');
             });
         }
     });

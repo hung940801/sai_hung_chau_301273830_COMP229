@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar">
     <div class="container-fluid">
         <!-- Custom icon -->
-        <a class="navbar-brand col-1" href="/">
+        <a class="navbar-brand" href="/">
             <img src="/assets/images/logo.png" alt="">
         </a>
         <!-- responsive menu button -->
@@ -13,21 +13,46 @@
         <div class="collapse navbar-collapse col-10" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link <%if (slug == 'home') { %>active<% } %>" aria-current="page" href="home"><i class="fa-solid fa-house"></i> Home</a>
+                    <a class="nav-link <%if (slug == 'home') { %>active<% } %>" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <%if (slug == 'about') { %>active<% } %>" aria-current="page" href="about"><i class="fa fa-address-card"></i> About</a>
+                    <a class="nav-link <%if (slug == 'about') { %>active<% } %>" aria-current="page" href="/about"><i class="fa fa-address-card"></i> About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <%if (slug == 'services') { %>active<% } %>" aria-current="page" href="services"><i class="fa-solid fa-face-smile"></i> Services</a>
+                    <a class="nav-link <%if (slug == 'services') { %>active<% } %>" aria-current="page" href="/services"><i class="fa-solid fa-face-smile"></i> Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <%if (slug == 'projects') { %>active<% } %>" aria-current="page" href="projects"><i class="fa-solid fa-book"></i> Projects</a>
+                    <a class="nav-link <%if (slug == 'projects') { %>active<% } %>" aria-current="page" href="/projects"><i class="fa-solid fa-book"></i> Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <%if (slug == 'contact') { %>active<% } %>" aria-current="page" href="contact"><i class="fa-solid fa-phone"></i> Contact</a>
+                    <a class="nav-link <%if (slug == 'contact') { %>active<% } %>" aria-current="page" href="/contact"><i class="fa-solid fa-phone"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%if (slug == 'business_contacts') { %>active<% } %>" aria-current="page" href="/business_contacts"><i class="fa-solid fa-address-book"></i> Business Contacts</a>
                 </li>
             </ul>
+            <div class="navbar-login-wrapper">
+                <!-- Check if the user logged in -->
+                <% if (typeof displayName == "string" && displayName) { %>
+                    <span>
+                        Welcome,
+                    </span>
+                    <div class="dropdown user-dropdown">
+                        <i class="fas fa-lg fa-user"></i>
+                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <%=displayName%>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end ">
+                            <li>
+                                <i class="fas fa-lg fa-sign-out-alt"></i>
+                                <a href="/logout" class="nav-link">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                <% } else { %>
+                    <a href="/login" class="navber-login-btn"><i class="fas fa-lg fa-sign-in-alt"></i>&nbsp;Login</a>
+                <% } %>
+            </div>
         </div>
     </div>
 </nav>

@@ -1,0 +1,67 @@
+/* --------------------------------------------- */
+/* Filename: /auth/register.css                  */
+/* Student Name: Sai Hung, Chau                  */
+/* Student ID: 301273830                         */
+/* Date: 4 Feb 2023                              */
+/* --------------------------------------------- */
+
+/* Sytle of the register form */
+.register-form-container {
+    padding: 20px;
+}
+.register-form-container .register-form .form-group label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+}
+.register-form-container .register-form .form-group input {
+    margin-bottom: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    height: 40px;
+}
+.register-form-container .register-form .form-group input[type="submit"].register-form-submit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #FFF;
+    background-color: #333;
+}
+.register-form-container .register-form .form-group input[type="submit"].register-form-submit:hover {
+    background-color: #FFF;
+    color: #333;
+}
+.register-form-container .register-form .form-group .register-form-cancel {
+    margin-bottom: 20px;
+    border: 3px solid #333;
+    border-radius: 0px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    color: #FFF;
+    background-color: #333;
+    opacity: 0.5;
+}
+.register-form-container .register-form .form-group .register-form-cancel:hover {
+    /* background-color: #333;
+    color: #FFF; */
+    background-color: #FFF;
+    color: #333;
+    opacity: 1;
+}
+.register-form-container .register-form .form-group.register-form-login-wrapper {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    color: #333;
+}
+.register-form-container .register-form .form-group.register-form-login-wrapper .register-form-login {
+    text-decoration: underline;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    color: #333;
+}

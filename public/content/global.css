@@ -52,3 +52,8 @@ body > main.container > .jumbotron {
     padding: 20px;
     border-bottom: 5px solid #333;
 }
+
+body main .alert {
+    border-radius: 0px;
+    box-shadow: 7px 7px 10px #888888;
+}

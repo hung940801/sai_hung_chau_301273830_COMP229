@@ -1,0 +1,56 @@
+<div class="register-form-container">
+    <!-- message Area-->
+    <% if (message.length>0){ %>
+    <div class="alert alert-danger">
+        <%=message%>
+    </div>
+    <% } %>
+    <!-- Register form -->
+    <div class="row align-item-center justify-content-center">
+        <div class="0ffert md-4 col-md-4">
+            <form method="POST" autocomplete="" class="register-form">
+                <fieldset class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control"
+                    name="username"
+                    placeholder = "Username"
+                    id ="username" required autofocus>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control"
+                    name="password"
+                    placeholder = "Password"
+                    id ="password" required>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control"
+                    name="email"
+                    placeholder = "Email Address"
+                    id ="email" required>
+                </fieldset>
+                            
+                <fieldset class="form-group">
+                    <label for="displayName">Display Name:</label>
+                    <input type="text" class="form-control"
+                    name="displayName"
+                    placeholder = "Display Name"
+                    id ="displayName" required>
+                </fieldset>
+    
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success register-form-submit" value="Register">
+                    <a href="/" class="btn btn-warning register-form-cancel">Cancel</a>
+                </fieldset>
+
+                <fieldset class="form-group text-right register-form-login-wrapper">
+                    Already have an account? <a href="/login" class="register-form-login">Login</a>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+</div>

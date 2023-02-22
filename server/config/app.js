@@ -12,21 +12,22 @@ let localStrategy = passport_local.Strategy;
 let flash = require('connect-flash');
 
 // connect to mongo, database setup
-// let mongoose = require('mongoose');
-// let DB = require('./db')
+let mongoose = require('mongoose');
+let DB = require('./db')
 
-// point mongoose to the db{"URI"}
-// mongoose.connect(DB.URI, { useNewUrlParser:true, useUnifiedtopology:true });
-//creating an event to let mongo connect to the database
-// let mongoDB = mongoose.connection;
-// mongoDB.on('error', console.error.bind(console, "Connect Error: "));
-// mongoDB.once('open', ()=>{
-//     console.log("Connected to mongoDB..");
-// });
+// Point mongoose to the db{"URI"}
+mongoose.connect(DB.URI, { useNewUrlParser:true, useUnifiedtopology:true });
+// Creating an event to let mongo connect to the database
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, "Connect Error: "));
+mongoDB.once('open', ()=>{
+    console.log("Connected to mongoDB..");
+});
 
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
 var projectsRouter = require('../routes/projects');
+var businessContactsRouter = require('../routes/business_contact');
 
 var app = express();
 
@@ -64,6 +65,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/projects', projectsRouter);
+app.use('/business_contacts', businessContactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -19,3 +19,12 @@
 @import url(./contents/projects.css);
 @import url(./contents/contact.css);
 @import url(./contents/error.css);
+
+/* Auth CSS */
+@import url(./auth/login.css);
+@import url(./auth/register.css);
+
+/* Business Contact */
+@import url(./business_contacts/add.css);
+@import url(./business_contacts/edit.css);
+@import url(./business_contacts/list.css);
